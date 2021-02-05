@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1024px;
+}
+
+header {
+  width: 320px;
+  height: 44px;
+}
+
+header nav {
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header #check {
+  opacity: 0;
+}
+
+header #check:checked ~ .menu-container {
+  display: block;
+}
+
+header #check:checked ~ label :nth-child(3) {
+  display: none;
+}
+
+header #check:checked ~ label :nth-child(1) {
+  -webkit-transform: rotate(40deg) translate(3px, 1px);
+          transform: rotate(40deg) translate(3px, 1px);
+}
+
+header #check:checked ~ label :nth-child(2) {
+  -webkit-transform: rotate(-40deg) translate(3px, -1px);
+          transform: rotate(-40deg) translate(3px, -1px);
+}
+
+header label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 19px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+header label .menu-line {
+  background: #060a24;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
+}
+
+header .menu-container {
+  width: 100vw;
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+header .menu-container .menu-box {
+  font-size: 1rem;
+  background: #0000ec;
+  list-style: none;
+  padding-top: 24px;
+  border: 1px solid #0000ec;
+}
+
+header .menu-container .menu-box:nth-last-child(1) {
+  padding-bottom: 24px;
+}
+
+header .menu-container .menu-box a {
+  text-decoration: none;
+  font-family: "IBM Plex Mono", serif;
+  color: white;
+  padding-left: 16px;
+}
+
+main {
+  margin-top: 29px;
+}
+
+main h1 {
+  font-family: "IBM Plex Sans", serif;
+  color: #060a24;
+  line-height: 42px;
+  font-size: 36px;
+}
+
+main h1 span {
+  text-decoration: line-through;
+}
+
+main .introduction {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+main .introduction .brief-introduction {
+  margin-top: 16px;
+  line-height: 22px;
+  font-family: "IBM Plex Mono", serif;
+  color: #060a24;
+  font-size: 14px;
+}
+
+main .introduction .more {
+  margin-top: 36px;
+  width: 288px;
+  height: 48px;
+  font-family: "IBM Plex Mono", serif;
+  background: #00f3bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #060a24;
+  font-weight: bold;
+}
+
+main .episode-container {
+  margin-top: 24px;
+}
+
+main .episode-container .episode {
+  border: 1px solid #0000ec;
+  display: block;
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+          clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  background: #0000ec;
+}
+
+main .episode-container .episode .section-title {
+  color: white;
+  font-family: "IBM Plex Sans", serif;
+  font-size: 36px;
+  margin-top: 64px;
+  line-height: 42px;
+  padding-left: 16px;
+}
+
+main .episode-container .episode .spotify {
+  margin-top: 21px;
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+main .episode-container .episode .spotify iframe {
+  width: 298px;
+  height: 225px;
+  margin-bottom: 11px;
+}
+/*# sourceMappingURL=styles.css.map */

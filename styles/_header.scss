@@ -1,0 +1,68 @@
+header {
+  width: 320px;
+  height: 44px;
+  nav {
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #check {
+    opacity: 0;
+    &:checked ~ .menu-container {
+      display: block;
+    }
+    &:checked ~ label :nth-child(3) {
+      display: none;
+    }
+    &:checked ~ label :nth-child(1) {
+      transform: rotate(40deg) translate(3px, 1px);
+    }
+    &:checked ~ label :nth-child(2) {
+      transform: rotate(-40deg) translate(3px, -1px);
+    }
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 19px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    .menu-line {
+      background: $primary-color;
+      width: 18px;
+      height: 2px;
+      margin-bottom: 3px;
+    }
+  }
+  .menu-container {
+    width: 100vw;
+    display: none;
+    position: relative;
+    z-index: 1;
+    .menu-box {
+      font-size: 1rem;
+      background: $third-color;
+      list-style: none;
+      padding-top: 24px;
+      border: 1px solid $third-color;
+      &:nth-last-child(1) {
+        padding-bottom: 24px;
+      }
+      a {
+        text-decoration: none;
+        font-family: $first-font;
+        color: white;
+        padding-left: 16px;
+      }
+    }
+  }
+}
