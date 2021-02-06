@@ -36,9 +36,11 @@ main {
     margin-top: 24px;
     .episode {
       border: 1px solid $third-color;
-      display: block;
+      display: flex;
+      flex-direction: column;
       clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
       background: $third-color;
+      height: 215vh;
       .section-title {
         color: white;
         font-family: $second-font;
@@ -52,11 +54,107 @@ main {
         margin-left: 11px;
         margin-right: 11px;
         iframe {
+          border: 0;
           width: 298px;
-          height: 225px;
-          margin-bottom: 11px;
+          height: 232px; //with specification height 225px is not working;
         }
       }
+    }
+  }
+  .phone-history {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: -20vh;
+    #phone {
+      width: 360px;
+      height: 519px;
+    }
+  }
+  .article-read {
+    position: relative;
+    top: -20vh;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 27px;
+    width: 288px;
+    height: 338;
+    h1 {
+      color: $primary-color;
+      font-size: 36px;
+      line-height: 42px;
+      font-family: $second-font;
+    }
+    p {
+      font-size: 14px;
+      font-family: $first-font;
+      line-height: 22px;
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+  }
+  .characters {
+    position: relative;
+    top: -20vh;
+    margin-top: 54px;
+    & img:nth-child(2) {
+      margin-top: 14px;
+    }
+    h1 {
+      margin-right: 16px;
+      margin-left: 16px;
+      width: 288px;
+      height: 84px;
+      font-size: 36px;
+      line-height: 42px;
+      font-family: $second-font;
+      color: $primary-color;
+    }
+    .characters-image {
+      display: block;
+      width: 320px;
+      height: 243px;
+    }
+  }
+  .topics {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: -20vh;
+    margin-top: 48px;
+    h1 {
+      font-size: 36px;
+      line-height: 42px;
+      font-family: $second-font;
+      color: $primary-color;
+      margin-right: 16px;
+      margin-left: 16px;
+      text-align: left;
+    }
+    .container-image {
+      width: 320px;
+      height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-top: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 104px;
+        height: 104px;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-left: 16px;
+      margin-right: 16px;
+      color: $primary-color;
+      font-family: $second-font;
+      font-weight: bold;
     }
   }
 }
