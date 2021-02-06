@@ -1,0 +1,27 @@
+@mixin buttonStyle {
+  margin-top: 36px;
+  width: 288px;
+  height: 48px;
+  font-family: $first-font;
+  background: $second-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  font-weight: bold;
+  &:hover {
+    background-image: linear-gradient(
+      225deg,
+      $first-gradient-color 0%,
+      $second-gradient-color 100%
+    );
+  }
+}
+
+@mixin gradient-clip {
+  background-image: linear-gradient(
+    225deg,
+    $third-gradient-color 0%,
+    $fourth-gradient-color 100%
+  );
+}

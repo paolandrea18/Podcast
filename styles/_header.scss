@@ -11,9 +11,7 @@ header {
   .logo {
     width: 24px;
     height: 24px;
-    margin-left: 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 16px;
   }
   #check {
     opacity: 0;
@@ -33,9 +31,7 @@ header {
   label {
     display: flex;
     flex-direction: column;
-    margin-right: 19px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 19px;
     .menu-line {
       background: $primary-color;
       width: 18px;
@@ -60,7 +56,7 @@ header {
       a {
         text-decoration: none;
         font-family: $first-font;
-        color: white;
+        color: #fff;
         padding-left: 16px;
       }
     }

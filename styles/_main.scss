@@ -10,8 +10,7 @@ main {
     }
   }
   .introduction {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 0 16px;
     .brief-introduction {
       margin-top: 16px;
       line-height: 22px;
@@ -20,29 +19,19 @@ main {
       font-size: 14px;
     }
     .more {
-      margin-top: 36px;
-      width: 288px;
-      height: 48px;
-      font-family: $first-font;
-      background: $second-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $primary-color;
-      font-weight: bold;
+      @include buttonStyle;
     }
   }
   .episode-container {
     margin-top: 24px;
     .episode {
-      border: 1px solid $third-color;
       display: flex;
       flex-direction: column;
       clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-      background: $third-color;
-      height: 215vh;
+      @include gradient-clip;
+      height: 1203.5px;
       .section-title {
-        color: white;
+        color: #fff;
         font-family: $second-font;
         font-size: 36px;
         margin-top: 64px;
@@ -50,9 +39,7 @@ main {
         padding-left: 16px;
       }
       .spotify {
-        margin-top: 21px;
-        margin-left: 11px;
-        margin-right: 11px;
+        margin: 21px 11px 0;
         iframe {
           border: 0;
           width: 298px;
@@ -66,7 +53,7 @@ main {
     align-content: center;
     align-items: center;
     position: relative;
-    top: -20vh;
+    top: -100px;
     #phone {
       width: 360px;
       height: 519px;
@@ -74,10 +61,8 @@ main {
   }
   .article-read {
     position: relative;
-    top: -20vh;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-top: 27px;
+    top: -100px;
+    margin: 27px 16px 0;
     width: 288px;
     height: 338;
     h1 {
@@ -90,20 +75,18 @@ main {
       font-size: 14px;
       font-family: $first-font;
       line-height: 22px;
-      margin-top: 8px;
-      margin-bottom: 14px;
+      margin: 8px 0 14px;
     }
   }
   .characters {
     position: relative;
-    top: -20vh;
+    top: -100px;
     margin-top: 54px;
     & img:nth-child(2) {
       margin-top: 14px;
     }
     h1 {
-      margin-right: 16px;
-      margin-left: 16px;
+      margin: 0 16px;
       width: 288px;
       height: 84px;
       font-size: 36px;
@@ -122,15 +105,24 @@ main {
     flex-direction: column;
     text-align: center;
     position: relative;
-    top: -20vh;
+    top: -100px;
     margin-top: 48px;
+    & .container-image:nth-child(2) {
+      margin-top: 24px;
+    }
+    & .container-image:nth-child(4) {
+      margin-top: 36px;
+    }
+    & .container-image:nth-child(6),
+    .container-image:nth-child(8) {
+      margin-top: 52px;
+    }
     h1 {
       font-size: 36px;
       line-height: 42px;
       font-family: $second-font;
       color: $primary-color;
-      margin-right: 16px;
-      margin-left: 16px;
+      margin: 0 16px;
       text-align: left;
     }
     .container-image {
@@ -138,11 +130,10 @@ main {
       height: 130px;
       display: flex;
       justify-content: center;
+      align-content: center;
       align-items: center;
       img {
-        margin-top: 24px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 13px 0;
         width: 104px;
         height: 104px;
       }
@@ -150,11 +141,36 @@ main {
     h2 {
       font-size: 24px;
       line-height: 32px;
-      margin-left: 16px;
-      margin-right: 16px;
+      margin: 0 16px;
       color: $primary-color;
       font-family: $second-font;
       font-weight: bold;
+    }
+  }
+  .lastest-news {
+    position: relative;
+    margin-top: 42px;
+    top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    @include gradient-clip;
+    height: 340px;
+    .question-news {
+      margin-top: 64px;
+      font-family: $second-font;
+      font-size: 36px;
+      line-height: 42px;
+      color: #fff;
+      width: 288px;
+      height: 126px;
+      text-align: center;
+    }
+    .listen-episodes {
+      @include buttonStyle;
+      margin: 0 16px;
     }
   }
 }

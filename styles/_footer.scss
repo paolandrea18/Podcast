@@ -1,0 +1,14 @@
+footer {
+  position: relative;
+  top: -100px;
+  font-size: 14px;
+  font-family: $first-font;
+  margin-top: 24px;
+  text-align: center;
+  .social-media-icons {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

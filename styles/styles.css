@@ -36,9 +36,7 @@ header nav {
 header .logo {
   width: 24px;
   height: 24px;
-  margin-left: 16px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 16px;
 }
 
 header #check {
@@ -71,9 +69,7 @@ header label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 19px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 16px 19px;
 }
 
 header label .menu-line {
@@ -105,7 +101,7 @@ header .menu-container .menu-box:nth-last-child(1) {
 header .menu-container .menu-box a {
   text-decoration: none;
   font-family: "IBM Plex Mono", serif;
-  color: white;
+  color: #fff;
   padding-left: 16px;
 }
 
@@ -125,8 +121,7 @@ main h1 span {
 }
 
 main .introduction {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 0 16px;
 }
 
 main .introduction .brief-introduction {
@@ -156,12 +151,15 @@ main .introduction .more {
   font-weight: bold;
 }
 
+main .introduction .more:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+
 main .episode-container {
   margin-top: 24px;
 }
 
 main .episode-container .episode {
-  border: 1px solid #0000ec;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,12 +169,12 @@ main .episode-container .episode {
           flex-direction: column;
   -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
           clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-  background: #0000ec;
-  height: 215vh;
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  height: 1203.5px;
 }
 
 main .episode-container .episode .section-title {
-  color: white;
+  color: #fff;
   font-family: "IBM Plex Sans", serif;
   font-size: 36px;
   margin-top: 64px;
@@ -185,9 +183,7 @@ main .episode-container .episode .section-title {
 }
 
 main .episode-container .episode .spotify {
-  margin-top: 21px;
-  margin-left: 11px;
-  margin-right: 11px;
+  margin: 21px 11px 0;
 }
 
 main .episode-container .episode .spotify iframe {
@@ -206,7 +202,7 @@ main .phone-history {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: -20vh;
+  top: -100px;
 }
 
 main .phone-history #phone {
@@ -216,10 +212,8 @@ main .phone-history #phone {
 
 main .article-read {
   position: relative;
-  top: -20vh;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 27px;
+  top: -100px;
+  margin: 27px 16px 0;
   width: 288px;
   height: 338;
 }
@@ -235,13 +229,12 @@ main .article-read p {
   font-size: 14px;
   font-family: "IBM Plex Mono", serif;
   line-height: 22px;
-  margin-top: 8px;
-  margin-bottom: 14px;
+  margin: 8px 0 14px;
 }
 
 main .characters {
   position: relative;
-  top: -20vh;
+  top: -100px;
   margin-top: 54px;
 }
 
@@ -250,8 +243,7 @@ main .characters img:nth-child(2) {
 }
 
 main .characters h1 {
-  margin-right: 16px;
-  margin-left: 16px;
+  margin: 0 16px;
   width: 288px;
   height: 84px;
   font-size: 36px;
@@ -276,8 +268,21 @@ main .topics {
           flex-direction: column;
   text-align: center;
   position: relative;
-  top: -20vh;
+  top: -100px;
   margin-top: 48px;
+}
+
+main .topics .container-image:nth-child(2) {
+  margin-top: 24px;
+}
+
+main .topics .container-image:nth-child(4) {
+  margin-top: 36px;
+}
+
+main .topics .container-image:nth-child(6),
+main .topics .container-image:nth-child(8) {
+  margin-top: 52px;
 }
 
 main .topics h1 {
@@ -285,8 +290,7 @@ main .topics h1 {
   line-height: 42px;
   font-family: "IBM Plex Sans", serif;
   color: #060a24;
-  margin-right: 16px;
-  margin-left: 16px;
+  margin: 0 16px;
   text-align: left;
 }
 
@@ -299,15 +303,15 @@ main .topics .container-image {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 main .topics .container-image img {
-  margin-top: 24px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 13px 0;
   width: 104px;
   height: 104px;
 }
@@ -315,10 +319,88 @@ main .topics .container-image img {
 main .topics h2 {
   font-size: 24px;
   line-height: 32px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 0 16px;
   color: #060a24;
   font-family: "IBM Plex Sans", serif;
   font-weight: bold;
+}
+
+main .lastest-news {
+  position: relative;
+  margin-top: 42px;
+  top: -100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  height: 340px;
+}
+
+main .lastest-news .question-news {
+  margin-top: 64px;
+  font-family: "IBM Plex Sans", serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fff;
+  width: 288px;
+  height: 126px;
+  text-align: center;
+}
+
+main .lastest-news .listen-episodes {
+  margin-top: 36px;
+  width: 288px;
+  height: 48px;
+  font-family: "IBM Plex Mono", serif;
+  background: #00f3bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #060a24;
+  font-weight: bold;
+  margin: 0 16px;
+}
+
+main .lastest-news .listen-episodes:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+
+footer {
+  position: relative;
+  top: -100px;
+  font-size: 14px;
+  font-family: "IBM Plex Mono", serif;
+  margin-top: 24px;
+  text-align: center;
+}
+
+footer .social-media-icons {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=styles.css.map */
