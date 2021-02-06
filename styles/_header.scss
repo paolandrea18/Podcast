@@ -1,8 +1,8 @@
 header {
-  width: 320px;
+  width: 100vw;
   height: 44px;
   nav {
-    width: 320px;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,7 +49,6 @@ header {
       background: $third-color;
       list-style: none;
       padding-top: 24px;
-      border: 1px solid $third-color;
       &:nth-last-child(1) {
         padding-bottom: 24px;
       }
@@ -58,6 +57,42 @@ header {
         font-family: $first-font;
         color: #fff;
         padding-left: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    nav {
+      flex-wrap: nowrap;
+      label {
+        display: none;
+      }
+    }
+    height: 80px;
+    .logo {
+      width: 36px;
+      height: 36px;
+      margin: 22px 40px;
+    }
+    .menu-container {
+      display: flex;
+      justify-content: space-between;
+      width: 50vw;
+      position: unset;
+      z-index: unset;
+      margin: 26px 40px 26px 0;
+      .menu-box {
+        background: unset;
+        padding: unset;
+        a {
+          color: $primary-color;
+          font-size: 1rem;
+          line-height: 28px;
+          font-family: $first-font;
+          padding: unset;
+        }
       }
     }
   }

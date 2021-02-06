@@ -50,7 +50,6 @@ main {
   }
   .phone-history {
     display: flex;
-    align-content: center;
     align-items: center;
     position: relative;
     top: -100px;
@@ -130,7 +129,6 @@ main {
       height: 130px;
       display: flex;
       justify-content: center;
-      align-content: center;
       align-items: center;
       img {
         padding: 13px 0;
@@ -153,7 +151,6 @@ main {
     top: -100px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     @include gradient-clip;
@@ -171,6 +168,21 @@ main {
     .listen-episodes {
       @include buttonStyle;
       margin: 0 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 35px;
+    .introduction {
+      margin-left: 80px;
+      .brief-introduction {
+        width: 80vh;
+      }
+    }
+    .section-title {
+      margin-left: 80px;
     }
   }
 }
