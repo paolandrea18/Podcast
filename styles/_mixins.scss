@@ -25,3 +25,12 @@
     $fourth-gradient-color 100%
   );
 }
+
+@mixin check-behaviour {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  position: unset;
+  z-index: unset;
+  margin: 26px 40px 26px 0;
+}

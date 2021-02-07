@@ -12,3 +12,16 @@ footer {
     justify-content: space-around;
   }
 }
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: -340px;
+    .social-media-icons {
+      width: 50vw;
+      margin-top: 0;
+    }
+  }
+}

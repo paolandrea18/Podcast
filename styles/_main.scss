@@ -109,11 +109,11 @@ main {
     & .container-image:nth-child(2) {
       margin-top: 24px;
     }
-    & .container-image:nth-child(4) {
+    & .container-image:nth-child(3) {
       margin-top: 36px;
     }
-    & .container-image:nth-child(6),
-    .container-image:nth-child(8) {
+    & .container-image:nth-child(4),
+    .container-image:nth-child(5) {
       margin-top: 52px;
     }
     h1 {
@@ -126,8 +126,9 @@ main {
     }
     .container-image {
       width: 320px;
-      height: 130px;
+      height: 162px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       img {
@@ -181,8 +182,74 @@ main {
         width: 80vh;
       }
     }
-    .section-title {
-      margin-left: 80px;
+    .episode-container {
+      margin-top: 30;
+      .episode {
+        height: 800px;
+        .section-title {
+          margin-left: 80px;
+        }
+        .spotify {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          iframe {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+    .phone-history {
+      padding-left: 50px;
+    }
+    .article-read {
+      position: relative;
+      top: -545px;
+      left: 400px;
+    }
+    .characters {
+      top: -450px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      & img:nth-child(2) {
+        margin: 0;
+      }
+      h1 {
+        padding-left: 100px;
+        width: 100vw;
+      }
+      .characters-image {
+        width: 383.9px;
+      }
+    }
+    .topics {
+      top: -450px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 25;
+      .container-image {
+        margin-top: 30px;
+        & .container-image:nth-child(2),
+        .container-image:nth-child(3),
+        .container-image:nth-child(4),
+        .container-image:nth-child(5) {
+          margin-top: 0;
+        }
+      }
+      h1 {
+        width: 100vw;
+        padding-left: 40px;
+      }
+    }
+    .lastest-news {
+      top: -400px;
+      .question-news {
+        width: 100vw;
+        padding-top: 40px;
+      }
     }
   }
 }

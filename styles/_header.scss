@@ -76,13 +76,14 @@ header {
       height: 36px;
       margin: 22px 40px;
     }
+    #check {
+      opacity: 0;
+      &:checked ~ .menu-container {
+        @include check-behaviour;
+      }
+    }
     .menu-container {
-      display: flex;
-      justify-content: space-between;
-      width: 50vw;
-      position: unset;
-      z-index: unset;
-      margin: 26px 40px 26px 0;
+      @include check-behaviour;
       .menu-box {
         background: unset;
         padding: unset;
@@ -92,6 +93,10 @@ header {
           line-height: 28px;
           font-family: $first-font;
           padding: unset;
+          &:hover {
+            text-decoration: line-through;
+            color: $second-color;
+          }
         }
       }
     }

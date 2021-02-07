@@ -120,6 +120,21 @@ header .menu-container .menu-box a {
     height: 36px;
     margin: 22px 40px;
   }
+  header #check {
+    opacity: 0;
+  }
+  header #check:checked ~ .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50vw;
+    position: unset;
+    z-index: unset;
+    margin: 26px 40px 26px 0;
+  }
   header .menu-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -142,6 +157,10 @@ header .menu-container .menu-box a {
     line-height: 28px;
     font-family: "IBM Plex Mono", serif;
     padding: unset;
+  }
+  header .menu-container .menu-box a:hover {
+    text-decoration: line-through;
+    color: #00f3bb;
   }
 }
 
@@ -314,12 +333,12 @@ main .topics .container-image:nth-child(2) {
   margin-top: 24px;
 }
 
-main .topics .container-image:nth-child(4) {
+main .topics .container-image:nth-child(3) {
   margin-top: 36px;
 }
 
-main .topics .container-image:nth-child(6),
-main .topics .container-image:nth-child(8) {
+main .topics .container-image:nth-child(4),
+main .topics .container-image:nth-child(5) {
   margin-top: 52px;
 }
 
@@ -334,10 +353,14 @@ main .topics h1 {
 
 main .topics .container-image {
   width: 320px;
-  height: 130px;
+  height: 162px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -426,8 +449,93 @@ main .lastest-news .listen-episodes:hover {
   main .introduction .brief-introduction {
     width: 80vh;
   }
-  main .section-title {
+  main .episode-container {
+    margin-top: 30;
+  }
+  main .episode-container .episode {
+    height: 800px;
+  }
+  main .episode-container .episode .section-title {
     margin-left: 80px;
+  }
+  main .episode-container .episode .spotify {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .episode-container .episode .spotify iframe {
+    margin-bottom: 40px;
+  }
+  main .phone-history {
+    padding-left: 50px;
+  }
+  main .article-read {
+    position: relative;
+    top: -545px;
+    left: 400px;
+  }
+  main .characters {
+    top: -450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .characters img:nth-child(2) {
+    margin: 0;
+  }
+  main .characters h1 {
+    padding-left: 100px;
+    width: 100vw;
+  }
+  main .characters .characters-image {
+    width: 383.9px;
+  }
+  main .topics {
+    top: -450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 25;
+  }
+  main .topics .container-image {
+    margin-top: 30px;
+  }
+  main .topics .container-image .container-image:nth-child(2),
+  main .topics .container-image .container-image:nth-child(3),
+  main .topics .container-image .container-image:nth-child(4),
+  main .topics .container-image .container-image:nth-child(5) {
+    margin-top: 0;
+  }
+  main .topics h1 {
+    width: 100vw;
+    padding-left: 40px;
+  }
+  main .lastest-news {
+    top: -400px;
+  }
+  main .lastest-news .question-news {
+    width: 100vw;
+    padding-top: 40px;
   }
 }
 
@@ -451,5 +559,24 @@ footer .social-media-icons {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    top: -340px;
+  }
+  footer .social-media-icons {
+    width: 50vw;
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
