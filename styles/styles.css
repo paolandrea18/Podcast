@@ -168,19 +168,19 @@ main {
   margin-top: 29px;
 }
 
-main h1 {
+main .introduction {
+  margin: 0 16px;
+}
+
+main .introduction h1 {
   font-family: "IBM Plex Sans", serif;
   color: #060a24;
   line-height: 42px;
   font-size: 36px;
 }
 
-main h1 span {
+main .introduction h1 span {
   text-decoration: line-through;
-}
-
-main .introduction {
-  margin: 0 16px;
 }
 
 main .introduction .brief-introduction {
@@ -229,7 +229,8 @@ main .episode-container .episode {
   -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
           clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
   background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-  height: 1203.5px;
+  width: 100vw;
+  padding-bottom: 150px;
 }
 
 main .episode-container .episode .section-title {
@@ -243,9 +244,23 @@ main .episode-container .episode .section-title {
 
 main .episode-container .episode .spotify {
   margin: 21px 11px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .episode-container .episode .spotify iframe {
+  margin-bottom: 11px;
+  margin-left: 11px;
   border: 0;
   width: 298px;
   height: 232px;
@@ -255,6 +270,10 @@ main .phone-history {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -268,11 +287,19 @@ main .phone-history #phone {
 }
 
 main .article-read {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: -100px;
+  width: 320px;
   margin: 27px 16px 0;
-  width: 288px;
-  height: 338;
 }
 
 main .article-read h1 {
@@ -280,6 +307,7 @@ main .article-read h1 {
   font-size: 36px;
   line-height: 42px;
   font-family: "IBM Plex Sans", serif;
+  width: 288px;
 }
 
 main .article-read p {
@@ -287,16 +315,23 @@ main .article-read p {
   font-family: "IBM Plex Mono", serif;
   line-height: 22px;
   margin: 8px 0 14px;
+  width: 288px;
 }
 
 main .characters {
   position: relative;
   top: -100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 54px;
-}
-
-main .characters img:nth-child(2) {
-  margin-top: 14px;
 }
 
 main .characters h1 {
@@ -307,9 +342,21 @@ main .characters h1 {
   line-height: 42px;
   font-family: "IBM Plex Sans", serif;
   color: #060a24;
+  margin-bottom: 14px;
 }
 
 main .characters .characters-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .characters .characters-image img {
   display: block;
   width: 320px;
   height: 243px;
@@ -323,23 +370,12 @@ main .topics {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   top: -100px;
   margin-top: 48px;
-}
-
-main .topics .container-image:nth-child(2) {
-  margin-top: 24px;
-}
-
-main .topics .container-image:nth-child(3) {
-  margin-top: 36px;
-}
-
-main .topics .container-image:nth-child(4),
-main .topics .container-image:nth-child(5) {
-  margin-top: 52px;
 }
 
 main .topics h1 {
@@ -349,11 +385,37 @@ main .topics h1 {
   color: #060a24;
   margin: 0 16px;
   text-align: left;
+  width: 288px;
 }
 
 main .topics .container-image {
-  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .topics .container-image .group-image:nth-child(1) {
+  margin-top: 24px;
   height: 162px;
+}
+
+main .topics .container-image .group-image:nth-child(2) {
+  margin-top: 36px;
+  height: 194px;
+}
+
+main .topics .container-image .group-image:nth-child(3),
+main .topics .container-image .group-image:nth-child(4) {
+  height: 162px;
+  margin-top: 52px;
+}
+
+main .topics .container-image .group-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,27 +423,25 @@ main .topics .container-image {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-main .topics .container-image img {
-  padding: 13px 0;
+main .topics .container-image .group-image img {
   width: 104px;
   height: 104px;
 }
 
-main .topics h2 {
+main .topics .container-image .group-image h2 {
   font-size: 24px;
   line-height: 32px;
-  margin: 0 16px;
+  padding: 13px 16px 0;
   color: #060a24;
   font-family: "IBM Plex Sans", serif;
   font-weight: bold;
+  text-align: center;
+  width: 288px;
 }
 
 main .lastest-news {
@@ -432,11 +492,27 @@ main .lastest-news .listen-episodes {
           align-items: center;
   color: #060a24;
   font-weight: bold;
-  margin: 0 16px;
+  margin: 36px 16px;
 }
 
 main .lastest-news .listen-episodes:hover {
   background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+}
+
+@media screen and (min-width: 550px) {
+  main .topics .container-image .group-image:nth-child(1) {
+    margin-top: 24px;
+    height: 162px;
+  }
+  main .topics .container-image .group-image:nth-child(2) {
+    margin-top: 24px;
+    height: 194px;
+  }
+  main .topics .container-image .group-image:nth-child(3),
+  main .topics .container-image .group-image:nth-child(4) {
+    margin-top: 24px;
+    height: 162px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -452,18 +528,10 @@ main .lastest-news .listen-episodes:hover {
   main .episode-container {
     margin-top: 30;
   }
-  main .episode-container .episode {
-    height: 800px;
-  }
   main .episode-container .episode .section-title {
     margin-left: 80px;
   }
   main .episode-container .episode .spotify {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -472,15 +540,18 @@ main .lastest-news .listen-episodes:hover {
     margin-bottom: 40px;
   }
   main .phone-history {
-    padding-left: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main .article-read {
-    position: relative;
-    top: -545px;
-    left: 400px;
+    padding-top: 30px;
   }
   main .characters {
-    top: -450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -495,14 +566,17 @@ main .lastest-news .listen-episodes:hover {
     margin: 0;
   }
   main .characters h1 {
-    padding-left: 100px;
+    padding-left: 50px;
     width: 100vw;
   }
   main .characters .characters-image {
-    width: 383.9px;
+    width: 100vw;
+  }
+  main .characters .characters-image img {
+    width: 384px;
+    height: 307px;
   }
   main .topics {
-    top: -450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -512,10 +586,7 @@ main .lastest-news .listen-episodes:hover {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 25;
+    margin-top: 25px;
   }
   main .topics .container-image {
     margin-top: 30px;
@@ -527,11 +598,8 @@ main .lastest-news .listen-episodes:hover {
     margin-top: 0;
   }
   main .topics h1 {
-    width: 100vw;
-    padding-left: 40px;
-  }
-  main .lastest-news {
-    top: -400px;
+    width: 100vh;
+    padding-left: 35px;
   }
   main .lastest-news .question-news {
     width: 100vw;
@@ -572,7 +640,6 @@ footer .social-media-icons {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    top: -340px;
   }
   footer .social-media-icons {
     width: 50vw;

@@ -1,16 +1,16 @@
 main {
   margin-top: 29px;
-  h1 {
-    font-family: $second-font;
-    color: $primary-color;
-    line-height: 42px;
-    font-size: 36px;
-    span {
-      text-decoration: line-through;
-    }
-  }
   .introduction {
     margin: 0 16px;
+    h1 {
+      font-family: $second-font;
+      color: $primary-color;
+      line-height: 42px;
+      font-size: 36px;
+      span {
+        text-decoration: line-through;
+      }
+    }
     .brief-introduction {
       margin-top: 16px;
       line-height: 22px;
@@ -29,7 +29,8 @@ main {
       flex-direction: column;
       clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
       @include gradient-clip;
-      height: 1203.5px;
+      width: 100vw;
+      padding-bottom: 150px;
       .section-title {
         color: #fff;
         font-family: $second-font;
@@ -40,7 +41,13 @@ main {
       }
       .spotify {
         margin: 21px 11px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
         iframe {
+          margin-bottom: 11px;
+          margin-left: 11px;
           border: 0;
           width: 298px;
           height: 232px; //with specification height 225px is not working;
@@ -50,6 +57,7 @@ main {
   }
   .phone-history {
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     top: -100px;
@@ -59,31 +67,35 @@ main {
     }
   }
   .article-read {
-    position: relative;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: -100px;
+    width: 320px;
     margin: 27px 16px 0;
-    width: 288px;
-    height: 338;
     h1 {
       color: $primary-color;
       font-size: 36px;
       line-height: 42px;
       font-family: $second-font;
+      width: 288px;
     }
     p {
       font-size: 14px;
       font-family: $first-font;
       line-height: 22px;
       margin: 8px 0 14px;
+      width: 288px;
     }
   }
   .characters {
     position: relative;
     top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 54px;
-    & img:nth-child(2) {
-      margin-top: 14px;
-    }
     h1 {
       margin: 0 16px;
       width: 288px;
@@ -92,30 +104,26 @@ main {
       line-height: 42px;
       font-family: $second-font;
       color: $primary-color;
+      margin-bottom: 14px;
     }
     .characters-image {
-      display: block;
-      width: 320px;
-      height: 243px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        display: block;
+        width: 320px;
+        height: 243px;
+      }
     }
   }
   .topics {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     position: relative;
     top: -100px;
     margin-top: 48px;
-    & .container-image:nth-child(2) {
-      margin-top: 24px;
-    }
-    & .container-image:nth-child(3) {
-      margin-top: 36px;
-    }
-    & .container-image:nth-child(4),
-    .container-image:nth-child(5) {
-      margin-top: 52px;
-    }
     h1 {
       font-size: 36px;
       line-height: 42px;
@@ -123,27 +131,44 @@ main {
       color: $primary-color;
       margin: 0 16px;
       text-align: left;
+      width: 288px;
     }
     .container-image {
-      width: 320px;
-      height: 162px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      img {
-        padding: 13px 0;
-        width: 104px;
-        height: 104px;
+      flex-wrap: wrap;
+      & .group-image:nth-child(1) {
+        margin-top: 24px;
+        height: 162px;
       }
-    }
-    h2 {
-      font-size: 24px;
-      line-height: 32px;
-      margin: 0 16px;
-      color: $primary-color;
-      font-family: $second-font;
-      font-weight: bold;
+      & .group-image:nth-child(2) {
+        margin-top: 36px;
+        height: 194px;
+      }
+      & .group-image:nth-child(3),
+      .group-image:nth-child(4) {
+        height: 162px;
+        margin-top: 52px;
+      }
+      .group-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 104px;
+          height: 104px;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 32px;
+          padding: 13px 16px 0;
+          color: $primary-color;
+          font-family: $second-font;
+          font-weight: bold;
+          text-align: center;
+          width: 288px;
+        }
+      }
     }
   }
   .lastest-news {
@@ -168,7 +193,29 @@ main {
     }
     .listen-episodes {
       @include buttonStyle;
-      margin: 0 16px;
+      margin: 36px 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  main {
+    .topics {
+      .container-image {
+        & .group-image:nth-child(1) {
+          margin-top: 24px;
+          height: 162px;
+        }
+        & .group-image:nth-child(2) {
+          margin-top: 24px;
+          height: 194px;
+        }
+        & .group-image:nth-child(3),
+        .group-image:nth-child(4) {
+          margin-top: 24px;
+          height: 162px;
+        }
+      }
     }
   }
 }
@@ -185,13 +232,10 @@ main {
     .episode-container {
       margin-top: 30;
       .episode {
-        height: 800px;
         .section-title {
           margin-left: 80px;
         }
         .spotify {
-          display: flex;
-          flex-wrap: wrap;
           justify-content: space-evenly;
           iframe {
             margin-bottom: 40px;
@@ -200,15 +244,13 @@ main {
       }
     }
     .phone-history {
-      padding-left: 50px;
+      flex-direction: row;
+      justify-content: center;
     }
     .article-read {
-      position: relative;
-      top: -545px;
-      left: 400px;
+      padding-top: 30px;
     }
     .characters {
-      top: -450px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -216,20 +258,22 @@ main {
         margin: 0;
       }
       h1 {
-        padding-left: 100px;
+        padding-left: 50px;
         width: 100vw;
       }
       .characters-image {
-        width: 383.9px;
+        width: 100vw;
+        img {
+          width: 384px;
+          height: 307px;
+        }
       }
     }
     .topics {
-      top: -450px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 25;
+      margin-top: 25px;
       .container-image {
         margin-top: 30px;
         & .container-image:nth-child(2),
@@ -240,12 +284,11 @@ main {
         }
       }
       h1 {
-        width: 100vw;
-        padding-left: 40px;
+        width: 100vh;
+        padding-left: 35px;
       }
     }
     .lastest-news {
-      top: -400px;
       .question-news {
         width: 100vw;
         padding-top: 40px;
