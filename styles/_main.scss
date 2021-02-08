@@ -67,11 +67,10 @@ main {
     }
   }
   .article-read {
-    // position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: -100px;
     width: 320px;
     margin: 27px 16px 0;
     h1 {
@@ -112,8 +111,8 @@ main {
       justify-content: center;
       img {
         display: block;
-        width: 320px;
-        height: 243px;
+        width: 100vw;
+        height: 60vh;
       }
     }
   }
@@ -224,20 +223,23 @@ main {
   main {
     margin-top: 35px;
     .introduction {
-      margin-left: 80px;
+      padding-left: 80px;
       .brief-introduction {
         width: 80vh;
       }
     }
     .episode-container {
-      margin-top: 30;
+      margin-top: 30px;
       .episode {
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
         .section-title {
-          margin-left: 80px;
+          padding-left: 80px;
+          padding-top: 80px;
         }
         .spotify {
           justify-content: space-evenly;
           iframe {
+            margin-left: unset;
             margin-bottom: 40px;
           }
         }
@@ -246,8 +248,10 @@ main {
     .phone-history {
       flex-direction: row;
       justify-content: center;
+      top: -120px;
     }
     .article-read {
+      top: 10px;
       padding-top: 30px;
     }
     .characters {
@@ -289,9 +293,150 @@ main {
       }
     }
     .lastest-news {
+      clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
       .question-news {
         width: 100vw;
-        padding-top: 40px;
+        padding-top: 75px;
+      }
+      .listen-episodes {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 945px) {
+  main {
+    .episode-container {
+      .episode {
+        .spotify {
+          iframe {
+            width: 45vw;
+          }
+        }
+      }
+    }
+    .characters {
+      .characters-image {
+        img {
+          width: 33.33vw;
+          height: 40vh;
+        }
+      }
+    }
+    .topics {
+      .container-image {
+        width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+        .group-image {
+          width: 23vw;
+          h2 {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    .introduction {
+      padding-left: 200px;
+      h1 {
+        font-size: 64px;
+        line-height: 84px;
+      }
+      .brief-introduction {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .more {
+        width: 226px;
+        height: 56px;
+      }
+    }
+    .episode-container {
+      .episode {
+        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        padding-bottom: 140px;
+        .section-title {
+          padding-left: 200px;
+          padding-top: 140px;
+          font-size: 48px;
+          line-height: 62px;
+        }
+        .spotify {
+          justify-content: space-evenly;
+          iframe {
+            width: 40vw;
+            height: 40vh;
+          }
+        }
+      }
+    }
+    .phone-history {
+      top: -150px;
+      #phone {
+        width: 457.6px;
+        height: 660px;
+      }
+      .article-read {
+        margin-top: 20.4px;
+        width: 464px;
+        height: 266px;
+        top: -120px;
+        h1 {
+          font-size: 47px;
+          width: 399px;
+          height: 62px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          width: 464px;
+        }
+      }
+    }
+    .characters {
+      h1 {
+        font-size: 48px;
+        line-height: 62px;
+        padding-left: 200px;
+      }
+      .characters-image {
+        img {
+          height: 50vh;
+        }
+      }
+    }
+    .topics {
+      h1 {
+        padding-left: 200px;
+        width: 100vw;
+        font-size: 48px;
+        line-height: 62px;
+      }
+      .container-image {
+        .group-image {
+          width: 260px;
+        }
+      }
+    }
+    .lastest-news {
+      clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+      height: 400px;
+      .question-news {
+        width: 692px;
+        font-size: 48px;
+        line-height: 62px;
+      }
+      .listen-episodes {
+        height: 56px;
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 36px;
       }
     }
   }

@@ -24,3 +24,16 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  footer {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 36px;
+    margin-bottom: 31px;
+    i {
+      width: 18px;
+      height: 28px;
+    }
+  }
+}

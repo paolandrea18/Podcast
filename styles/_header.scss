@@ -64,13 +64,13 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
+    height: 80px;
     nav {
       flex-wrap: nowrap;
       label {
         display: none;
       }
     }
-    height: 80px;
     .logo {
       width: 36px;
       height: 36px;
@@ -98,6 +98,16 @@ header {
             color: $second-color;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    nav {
+      .menu-container {
+        justify-content: space-evenly;
       }
     }
   }

@@ -8,10 +8,6 @@
           box-sizing: border-box;
 }
 
-.container {
-  max-width: 1440px;
-}
-
 header {
   width: 100vw;
   height: 44px;
@@ -164,6 +160,14 @@ header .menu-container .menu-box a {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  header nav .menu-container {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 main {
   margin-top: 29px;
 }
@@ -287,6 +291,7 @@ main .phone-history #phone {
 }
 
 main .article-read {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,7 +302,6 @@ main .article-read {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: -100px;
   width: 320px;
   margin: 27px 16px 0;
 }
@@ -358,8 +362,8 @@ main .characters .characters-image {
 
 main .characters .characters-image img {
   display: block;
-  width: 320px;
-  height: 243px;
+  width: 100vw;
+  height: 60vh;
 }
 
 main .topics {
@@ -520,16 +524,21 @@ main .lastest-news .listen-episodes:hover {
     margin-top: 35px;
   }
   main .introduction {
-    margin-left: 80px;
+    padding-left: 80px;
   }
   main .introduction .brief-introduction {
     width: 80vh;
   }
   main .episode-container {
-    margin-top: 30;
+    margin-top: 30px;
+  }
+  main .episode-container .episode {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
   main .episode-container .episode .section-title {
-    margin-left: 80px;
+    padding-left: 80px;
+    padding-top: 80px;
   }
   main .episode-container .episode .spotify {
     -webkit-box-pack: space-evenly;
@@ -537,6 +546,7 @@ main .lastest-news .listen-episodes:hover {
             justify-content: space-evenly;
   }
   main .episode-container .episode .spotify iframe {
+    margin-left: unset;
     margin-bottom: 40px;
   }
   main .phone-history {
@@ -547,8 +557,10 @@ main .lastest-news .listen-episodes:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    top: -120px;
   }
   main .article-read {
+    top: 10px;
     padding-top: 30px;
   }
   main .characters {
@@ -601,9 +613,136 @@ main .lastest-news .listen-episodes:hover {
     width: 100vh;
     padding-left: 35px;
   }
+  main .lastest-news {
+    -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
   main .lastest-news .question-news {
     width: 100vw;
-    padding-top: 40px;
+    padding-top: 75px;
+  }
+  main .lastest-news .listen-episodes {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 945px) {
+  main .episode-container .episode .spotify iframe {
+    width: 45vw;
+  }
+  main .characters .characters-image img {
+    width: 33.33vw;
+    height: 40vh;
+  }
+  main .topics .container-image {
+    width: 100vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .topics .container-image .group-image {
+    width: 23vw;
+  }
+  main .topics .container-image .group-image h2 {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main .introduction {
+    padding-left: 200px;
+  }
+  main .introduction h1 {
+    font-size: 64px;
+    line-height: 84px;
+  }
+  main .introduction .brief-introduction {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  main .introduction .more {
+    width: 226px;
+    height: 56px;
+  }
+  main .episode-container .episode {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    padding-bottom: 140px;
+  }
+  main .episode-container .episode .section-title {
+    padding-left: 200px;
+    padding-top: 140px;
+    font-size: 48px;
+    line-height: 62px;
+  }
+  main .episode-container .episode .spotify {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .episode-container .episode .spotify iframe {
+    width: 40vw;
+    height: 40vh;
+  }
+  main .phone-history {
+    top: -150px;
+  }
+  main .phone-history #phone {
+    width: 457.6px;
+    height: 660px;
+  }
+  main .phone-history .article-read {
+    margin-top: 20.4px;
+    width: 464px;
+    height: 266px;
+    top: -120px;
+  }
+  main .phone-history .article-read h1 {
+    font-size: 47px;
+    width: 399px;
+    height: 62px;
+  }
+  main .phone-history .article-read p {
+    font-size: 16px;
+    line-height: 24px;
+    width: 464px;
+  }
+  main .characters h1 {
+    font-size: 48px;
+    line-height: 62px;
+    padding-left: 200px;
+  }
+  main .characters .characters-image img {
+    height: 50vh;
+  }
+  main .topics h1 {
+    padding-left: 200px;
+    width: 100vw;
+    font-size: 48px;
+    line-height: 62px;
+  }
+  main .topics .container-image .group-image {
+    width: 260px;
+  }
+  main .lastest-news {
+    -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    height: 400px;
+  }
+  main .lastest-news .question-news {
+    width: 692px;
+    font-size: 48px;
+    line-height: 62px;
+  }
+  main .lastest-news .listen-episodes {
+    height: 56px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 36px;
   }
 }
 
@@ -644,6 +783,19 @@ footer .social-media-icons {
   footer .social-media-icons {
     width: 50vw;
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 36px;
+    margin-bottom: 31px;
+  }
+  footer i {
+    width: 18px;
+    height: 28px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
