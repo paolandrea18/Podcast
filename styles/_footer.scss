@@ -3,9 +3,9 @@ footer {
   top: -100px;
   width: 100vw;
   margin-top: 24px;
+  text-align: center;
   span {
     @include googleFont($first-font, 14px, 400);
-
     color: $primary-color;
     text-align: center;
     line-height: 22px;
@@ -14,7 +14,6 @@ footer {
   .social-media-icons {
     margin-top: 16px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     a {
       color: #000;
@@ -29,12 +28,14 @@ footer {
     justify-content: space-between;
     span {
       font-size: 1rem;
+      text-align: left;
+      padding-left: 7vw;
     }
     .social-media-icons {
       width: 40vw;
       margin-top: unset;
       padding-top: 5px;
-      padding-right: 40px;
+      padding-right: 8vw;
       i {
         width: 18px;
         height: 28px;
@@ -48,8 +49,5 @@ footer {
     line-height: 28px;
     margin-top: 36px;
     margin-bottom: 31px;
-    .social-media-icons {
-      padding-left: 100px;
-    }
   }
 }

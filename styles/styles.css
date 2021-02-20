@@ -804,6 +804,7 @@ footer {
   top: -100px;
   width: 100vw;
   margin-top: 24px;
+  text-align: center;
 }
 
 footer span {
@@ -821,10 +822,6 @@ footer .social-media-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -849,12 +846,14 @@ footer .social-media-icons a {
   }
   footer span {
     font-size: 1rem;
+    text-align: left;
+    padding-left: 7vw;
   }
   footer .social-media-icons {
     width: 40vw;
     margin-top: unset;
     padding-top: 5px;
-    padding-right: 40px;
+    padding-right: 8vw;
   }
   footer .social-media-icons i {
     width: 18px;
@@ -867,9 +866,6 @@ footer .social-media-icons a {
     line-height: 28px;
     margin-top: 36px;
     margin-bottom: 31px;
-  }
-  footer .social-media-icons {
-    padding-left: 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
