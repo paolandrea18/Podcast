@@ -1,14 +1,19 @@
-@mixin buttonStyle {
+@mixin googleFont($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin buttonStyle($font, $size, $weight) {
   margin-top: 36px;
   width: 288px;
   height: 48px;
-  font-family: $first-font;
+  @include googleFont($font, $size, $weight);
   background: $second-color;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $primary-color;
-  font-weight: bold;
   &:hover {
     background-image: linear-gradient(
       225deg,

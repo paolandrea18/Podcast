@@ -45,7 +45,7 @@ header {
     position: relative;
     z-index: 1;
     .menu-box {
-      font-size: 1rem;
+      @include googleFont($first-font, 1rem, 300);
       background: $third-color;
       list-style: none;
       padding-top: 24px;
@@ -54,7 +54,6 @@ header {
       }
       a {
         text-decoration: none;
-        font-family: $first-font;
         color: #fff;
         padding-left: 16px;
       }
@@ -96,6 +95,9 @@ header {
           &:hover {
             text-decoration: line-through;
             color: $second-color;
+          }
+          &:active {
+            color: rgba(6, 10, 36, 0.56);
           }
         }
       }

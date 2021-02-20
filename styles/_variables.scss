@@ -1,14 +1,17 @@
 // Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+//IBM Plex Mono
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+//IBM Plex Sans
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap");
 
-$first-font: "IBM Plex Mono", serif;
+$first-font: "IBM Plex Mono", monospace;
 $primary-color: #060a24;
-$second-font: "IBM Plex Sans", serif;
+$second-font: "IBM Plex Sans", sans-serif;
 $second-color: #00f3bb;
 $third-color: #0000ec;
 $first-gradient-color: #0000fe;
 $second-gradient-color: #00f0b8;
 $third-gradient-color: #0000ff;
 $fourth-gradient-color: #0000a3;
+$mobile-text: "Un Podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+$desktop-text: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todo los jueves cada 15 días.";

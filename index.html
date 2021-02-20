@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Podcast</title>
     <link rel="stylesheet" href="/styles/styles.css" />
-    <!-- Font Awesome CDN-->
+    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -42,52 +42,52 @@
         </nav>
       </header>
       <main>
-        <div class="introduction">
-          <h1>Hello <span>world</span> pale blue dot.</h1>
-          <section class="brief-introduction">
-            <p>
-              Un podcast que explora el mundo de la programación. Nuevos
-              episodios, todos los jueves cada 15 días.
-            </p>
-          </section>
-          <section class="more">
+        <section class="introduction">
+          <div class="main-title">
+            <h1 id="first-title">Hello <span id="line">world</span></h1>
+            <h1 id="second-title">pale blue dot<span id="dot">.</span></h1>
+          </div>
+          <div class="brief-introduction">
+            <p id="shifter-text"></p>
+          </div>
+          <div class="more">
             <span>CONOCÉ MÁS</span>
-          </section>
-        </div>
+          </div>
+        </section>
         <div id="episode-menu-link" class="episode-container">
           <section class="episode">
-            <h1 class="section-title">Episodios</h1>
-            <article class="spotify">
+            <h2 class="section-title">Episodios</h2>
+            <div class="spotify">
               <iframe
-                src="https://open.spotify.com/embed-podcast/episode/2PSacIuV7FY0G4o3Yex1Zi"
+                src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt"
                 allowfullscreen
                 allow="encrypted-media"
               ></iframe>
               <iframe
-                src="https://open.spotify.com/embed-podcast/episode/59PXOfe6zrEOky2fcl0cqH"
+                src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt"
                 allowfullscreen
                 allow="encrypted-media"
               >
               </iframe>
               <iframe
-                src="https://open.spotify.com/embed-podcast/episode/1rooiCFQ4u5OYGjYNM3iqi"
-                allowtransparency="true"
+                src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD"
+                allowfullscreen
                 allow="encrypted-media"
               >
               </iframe>
               <iframe
-                src="https://open.spotify.com/embed-podcast/episode/7m3cTuNhlGOfySM3N3FcYL"
-                allowtransparency="true"
+                src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
+                allowfullscreen
                 allow="encrypted-media"
               >
               </iframe>
-            </article>
+            </div>
           </section>
         </div>
-        <section class="phone-history">
+        <div class="phone-history">
           <img id="phone" src="./images/phone.png" alt="phone" />
           <article id="us-menu-link" class="article-read">
-            <h1>De dónde venimos</h1>
+            <h2>De dónde venimos</h2>
             <p>
               Our posturing, our imagined self-importance, the delusion that we
               have some privileged position in the Universe, are challenged by
@@ -99,61 +99,71 @@
               will come from elsewhere to save us from ourselves.
             </p>
           </article>
-        </section>
+        </div>
         <section id="characters-menu-link" class="characters">
-          <h1>Invitadas/os estelares</h1>
+          <h2>Invitadas/os estelares</h2>
           <div class="characters-image">
-            <img src="/images/grace-hopper.png" alt="Grace Hopper" />
+            <img src="/images/Grace-Hopper.png" alt="Grace Hopper" />
             <img src="/images/Katie-Bouman.png" alt="Katie Bouman" />
-            <img src="/images/Margaret_Hamilton.png" alt="Margaret Hamilton" />
+            <img src="/images/Margaret-Hamilton.png" alt="Margaret Hamilton" />
             <img
-              src="/images/An E.R.A.Univac 1103 computer in the 1950s.png"
+              src="/images/E.R.A.Univac-1103-1950s.png"
               alt="An E.R.A.Univac 1103 computer in the 1950s"
             />
             <img
-              src="/images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
+              src="/images/Eniac-Computer-Operators.png"
               alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer"
             />
             <img src="/images/susan-kare.png" alt="Susan Kare" />
           </div>
         </section>
         <section id="topics-menu-link" class="topics">
-          <h1>Algunos de nuestros temas</h1>
+          <h2>Algunos de nuestros temas</h2>
           <div class="container-image">
             <div class="group-image">
               <img src="/assets/icon1.svg" alt="Trabajo remoto" />
-              <h2>Trabajo Remoto</h2>
+              <h3>Trabajo Remoto</h3>
             </div>
             <div class="group-image">
               <img src="/assets/icon2.svg" alt="Repensando la programación" />
-              <h2>Repensando la programación</h2>
+              <h3>Repensando la programación</h3>
             </div>
             <div class="group-image">
               <img src="/assets/icon3.svg" alt="Bases del código" />
-              <h2>Bases del código</h2>
+              <h3>Bases del código</h3>
             </div>
             <div class="group-image">
               <img src="/assets/icon4.svg" alt="Seguridad informática" />
-              <h2>Seguridad informática</h2>
+              <h3>Seguridad informática</h3>
             </div>
           </div>
         </section>
-        <section class="lastest-news">
+        <div class="lastest-news">
           <span class="question-news"> ¿Querés las últimas novedades?</span>
-          <section class="listen-episodes">
+          <div class="listen-episodes">
             <span>ESCUCHÁ LOS EPISODIOS</span>
-          </section>
-        </section>
+          </div>
+        </div>
       </main>
       <footer>
         <span>© 2021— Hello blue pale dot</span>
-        <section class="social-media-icons">
-          <i class="fab fa-spotify fa-lg"></i>
-          <i class="fab fa-instagram fa-lg"></i>
-          <i class="fab fa-twitter fa-lg"></i>
-          <i class="fab fa-facebook fa-lg"></i>
-          <i class="fab fa-telegram fa-lg"></i>
-        </section>
+        <div class="social-media-icons">
+          <a href="https://www.spotify.com/" target="_blank">
+            <i class="fab fa-spotify fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/acamica/?hl=en" target="_blank">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://twitter.com/acamica_com?lang=en" target="_blank">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://www.facebook.com/Acamica.org" target="_blank">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://telegram.org/" target="_blank">
+            <i class="fab fa-telegram fa-lg"></i>
+          </a>
+        </div>
       </footer>
     </div>
   </body>
